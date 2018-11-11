@@ -1,0 +1,73 @@
+{
+    "name": "UserInfo",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "javadoc": "用户ID",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userName",
+            "javadoc": "人物名字",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nickName",
+            "javadoc": "人物昵称",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sex",
+            "javadoc": "性别",
+            "fieldType": "Sex",
+            "fieldValues": "MAN,WOMAN"
+        },
+        {
+            "fieldName": "ascription",
+            "javadoc": "归属门派",
+            "fieldType": "Ascription",
+            "fieldValues": "SHENGTI,YAOGUANG,JIANGJIA,YAOZU,SANXIU"
+        },
+        {
+            "fieldName": "address",
+            "javadoc": "家庭住址",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "javadoc": "电子邮箱",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "javadoc": "手机号",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthday",
+            "javadoc": "生日",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "createTime",
+            "javadoc": "创建时间",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "javadoc": "修改时间",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181111034117",
+    "javadoc": "《遮天》人员概况表",
+    "entityTableName": "user_info",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

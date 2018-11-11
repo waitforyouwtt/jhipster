@@ -1,0 +1,61 @@
+{
+    "name": "BankInfo",
+    "fields": [
+        {
+            "fieldName": "bankId",
+            "javadoc": "记录Id",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userId",
+            "javadoc": "用户Id",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "account",
+            "javadoc": "开户账号",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "accountName",
+            "javadoc": "开户名",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankName",
+            "javadoc": "开户银行",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bankBranchName",
+            "javadoc": "银行支行",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "amount",
+            "javadoc": "存款金额",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "createTime",
+            "javadoc": "创建时间",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updateTime",
+            "javadoc": "修改时间",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181111034118",
+    "javadoc": "银行表",
+    "entityTableName": "bank_info",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

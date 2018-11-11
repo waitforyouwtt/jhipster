@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity BankInfo.
+    -->
+    <changeSet id="20181111034118-1" author="jhipster">
+        <createTable tableName="bank_info" remarks="银行表">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="bank_id" type="varchar(255)" remarks="记录Id">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="user_id" type="varchar(255)" remarks="用户Id">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="jhi_account" type="varchar(255)" remarks="开户账号">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="account_name" type="varchar(255)" remarks="开户名">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="bank_name" type="varchar(255)" remarks="开户银行">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="bank_branch_name" type="varchar(255)" remarks="银行支行">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="amount" type="decimal(10,2)" remarks="存款金额">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="create_time" type="datetime" remarks="创建时间">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="update_time" type="datetime" remarks="修改时间">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="bank_info" columnName="create_time" columnDataType="datetime"/>
+        <dropDefaultValue tableName="bank_info" columnName="update_time" columnDataType="datetime"/>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>
